@@ -1,3 +1,9 @@
 from urllib import request
 
-myurl = "https://192.168.1.73/"
+myurl = "http://localhost:81/MyPortfolio.php"
+
+answ = request.urlopen(myurl)
+
+for target_list in answ.readlines():
+	print (target_list)
+
